@@ -1,12 +1,12 @@
 import os
 
 class node():
-    #se definen los lados degit 
+    #se definen las partes del arbol ya sea el dato, lado izquiero y el lado derecho 
     def __init__(self, dato):
         self.left = None
         self.right = None
         self.dato = dato
-
+#en esta clase se define el arbol y que en un principio la raiz se encuentra vacia
 class arbol():
     def __init__(self):
         self.root = None
@@ -21,7 +21,7 @@ class arbol():
             else:
                 a.right = self.insert(a.right, dato)
         return a
-
+#funcion de ordenar en orden
     def inorder(self, a):
         if a == None:
             return None
@@ -29,7 +29,7 @@ class arbol():
             self.inorder(a.left)
             print(a.dato)
             self.inorder(a.right)
-
+#funcion de ordenar en preorden
     def preorder(self, a):
         if a == None:
             return None
@@ -37,7 +37,7 @@ class arbol():
             print(a.dato)
             self.preorder(a.left)
             self.preorder(a.right)
-
+#funcion de ordenar en postorden
     def postorder(self, a):
         if a == None:
             return None
@@ -59,7 +59,7 @@ class arbol():
                     return self.buscar(dato, a.right)
 
 tree = arbol()
-
+#en este bloque agregamos un menú con las funcionalidades del programa que son inorden, preorden, postorden
 while True:
     os.system("cls")
     print("Arbol ABB")
