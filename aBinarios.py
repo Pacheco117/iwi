@@ -65,8 +65,8 @@ if __name__ == "__main__":
         if num == "1":
             nombre = input("ingrese nombre: ")
             cedula = input("ingrese la cedula: ")
-            nod0 = Nodo(nombre,cedula)
-            ab.agregar(Nodo)
+            Nod = Nodo(nombre, cedula)
+            ab.agregar(Nod)
         elif num == "2":
             print("imprimendo preorden")
             ab.preorder(ab.getRaiz())
