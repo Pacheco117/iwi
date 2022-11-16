@@ -65,25 +65,25 @@ while True:
     os.system("cls")
     print("Arbol ABB")
     opc = input("\n1.-Insertar nodo \n2.-Inorden \n3.-Preorden \n4.-Postorden \n5.-Buscar \n6.-Salir \n\nElige una opcion -> ")
-
+#si la opcion es 1 va a ingresar datos en nuestro arbol
     if opc == '1':
         nodo = input("\nIngresa el nodo -> ")
         if nodo.isdigit():
             nodo = int(nodo)
             tree.root = tree.insert(tree.root, nodo)
         else:
-            print("\nIngresa solo digitos...")
-    elif opc == '2':
+            print("\nIngresa solo digitos...")#en esta linea validamos que solo se ingresen números
+    elif opc == '2':#en esta linea se realiza la opcion de ordenar inorder y ejecuta nuestra clase propia
         if tree.root == None:
             print("Vacio")
         else:
             tree.inorder(tree.root)
-    elif opc == '3':
+    elif opc == '3':#en esta linea se realiza la opcion de ordenar inorder y ejecuta nuestra clase propia 
         if tree.root == None:
             print("Vacio")
         else:
             tree.preorder(tree.root)
-    elif opc == '4':
+    elif opc == '4':#en esta linea se realiza la opcion de ordenar postorder y ejecuta la clase propia
         if tree.root == None:
             print("Vacio")
         else:
