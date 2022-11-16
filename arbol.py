@@ -10,16 +10,16 @@ class node():
 class arbol():
     def __init__(self):
         self.root = None
-        
+#en este bloque se insertan datos en caso de que el arbo esté vacio se inserta uno
     def insert(self, a, dato):
         if a == None:
             a = node(dato)
         else:
             d = a.dato
-            if dato < d:
-                a.left = self.insert(a.left, dato)
+            if dato < d: #en esta parte si el dato insertado despues de la raiz
+                a.left = self.insert(a.left, dato) #se inserta el elemento en el lado izquierdo del arbol
             else:
-                a.right = self.insert(a.right, dato)
+                a.right = self.insert(a.right, dato)#de otra forma se inserta el elemento en el lado derecho del arbol
         return a
 #funcion de ordenar en orden
     def inorder(self, a):
@@ -29,6 +29,7 @@ class arbol():
             self.inorder(a.left)
             print(a.dato)
             self.inorder(a.right)
+            
 #funcion de ordenar en preorden
     def preorder(self, a):
         if a == None:
