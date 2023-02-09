@@ -7,6 +7,7 @@ class node():
         self.right = None
         self.dato = dato
 
+#en esta funcion se recorre el arbol y sus elementos
 class arbol():
     def __init__(self):
         self.root = None
@@ -21,7 +22,7 @@ class arbol():
             else:
                 a.right = self.insert(a.right, dato)
         return a
-
+#funcion de ordenamiento en orden
     def inorder(self, a):
         if a == None:
             return None
